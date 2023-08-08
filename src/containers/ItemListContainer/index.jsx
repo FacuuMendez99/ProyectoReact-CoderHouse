@@ -1,24 +1,16 @@
-import { Typography } from '@mui/material'
-import React from 'react'
-
-const categorias = ["Colgantes","Plafones","Lamparas de mesa","Lamparas de pared","Exterior"]
+import { Typography } from "@mui/material"
+import React from "react"
 
 
 export const ItemListContainer = (props) => {
     return (
-        <>
-        <div>
-            <Typography variant='h1'>{props.nombre}</Typography>
-            <ul>
-                {
-                    categorias.map(categoria => 
-                        <ul>
-                            <li>{categoria}</li>
-                        </ul>
-                    )
-                }
-            </ul>
-        </div>
-        </>
+            <Typography 
+                variant="h1" 
+                sx={{
+                    textAlign:"center"
+                }}
+            >
+                {props.nombre}
+            </Typography>
     )
 }

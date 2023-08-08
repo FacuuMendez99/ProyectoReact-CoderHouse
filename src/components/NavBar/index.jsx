@@ -1,23 +1,59 @@
 import * as React from "react";
-import AppBar from '@mui/material/AppBar';
-import {Box, Button, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography,} from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import AppBar from "@mui/material/AppBar";
+import {Box, Divider, Drawer, IconButton, List, ListItemButton, Toolbar, Typography, Menu, MenuItem} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import { CartWidget } from "../CartWidget";
 
-const navLinks = [
-    {
-        title: "Productos" , path: "#"
-    },
-    {
-        title:"Sobre Nosotros",path : "#"
-    },
-    {
-        title :"Contacto ",  path: "#"
-    },
-]
+function Secciones() {
 
-function NavBar() {
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    return (
+        <List sx={{
+            display:{
+                sx:"inline-flex",
+                md:"flex"
+                }
+            }}>
+            <ListItemButton
+                id="basic-button"
+                aria-controls={open ? "basic-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
+                onClick={handleClick}
+            >
+                Productos
+            </ListItemButton>
+            <Menu
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                "aria-labelledby": "basic-button",
+                }}
+                >
+                    <MenuItem onClick={handleClose}>Colgantes</MenuItem>
+                    <MenuItem onClick={handleClose}>Plafones</MenuItem>
+                    <MenuItem onClick={handleClose}>Lamparas de Mesa</MenuItem>
+                    <MenuItem onClick={handleClose}>Lamparas de Pared</MenuItem>
+                    <MenuItem onClick={handleClose}>Exterior</MenuItem>
+            </Menu>
+            <ListItemButton>Sobre Nosotros</ListItemButton>
+            <ListItemButton>Contacto</ListItemButton>
+        </List>
+    )
+}
+
+export default function NavBar() {
     const [open,setOpen] = useState(false);
     
     return (
@@ -26,48 +62,36 @@ function NavBar() {
                     <Typography variant="h5" flexGrow={1}>Chandelier</Typography>
                     <Box sx={
                         {display:{
-                            xs:'none',
-                            md:'flex'}
-                        }
-                    }>
-                        {
-                            navLinks.map(item => (
-                                
-                                <Button 
-                                    color="inherit" 
-                                    key={item.title}
-                                    component="a"
-                                    href={item.path}
-                                >{item.title}</Button>
-                                )
-                            )
-                        }
+                            xs:"none",
+                            md:"flex"}
+                        }}>
+                    <Secciones/>
                     </Box>
                     <Divider orientation="vertical" variant="middle" flexItem sx={
                             {display:{
-                                xs:'none',
-                                md:'flex'
+                                xs:"none",
+                                md:"flex"
                                 },
                                 marginLeft:2
                             }}/>
-                    <CartWidget ></CartWidget>
+                    <CartWidget/>
                     <Divider orientation="vertical" variant="middle" flexItem sx={
                             {display:{
-                                xs:'flex',
-                                md:'none'
+                                xs:"flex",
+                                md:"none"
                                 },
                                 marginX:2
                             }}/>
                     <IconButton 
-                        sx={
-                            {display:{
-                                xs:'flex',
-                                md:'none'
+                        sx={{
+                            display:{
+                                xs:"flex",
+                                md:"none"
                                 }
                             }}
                         onClick={() => setOpen(true)}
                     >
-                        <MenuIcon></MenuIcon>
+                        <MenuIcon/>
                     </IconButton>
                 </Toolbar>
                 <Drawer
@@ -75,28 +99,8 @@ function NavBar() {
                     anchor="right"
                     onClose={()=>setOpen(false)}
                 > 
-                <List>
-                    {
-                        navLinks.map(item => (
-                            <>
-                            <ListItem
-                            key={item.title}
-                            >
-                                <ListItemButton
-                                component="a"
-                                href={item.path}>
-                                    <ListItemText primary={item.title}/>
-                                </ListItemButton>
-                            </ListItem>
-                            <Divider />
-                            </>
-                            )
-                            )
-                        }
-                        </List>
+                    <Secciones/>
                 </Drawer>
             </AppBar>
         )
 }
-
-export default NavBar
