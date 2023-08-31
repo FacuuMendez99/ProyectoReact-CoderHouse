@@ -1,0 +1,121 @@
+[
+    {
+        "id": 1,
+        "nombre": "Bilbao",
+        "categoria": "exterior",
+        "precio": 45789,
+        "imagen": "bilbao2.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Burgos",
+        "categoria": "colgante",
+        "precio": 60432,
+        "imagen": "burgos.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Cancun",
+        "categoria": "pared",
+        "precio": 78591,
+        "imagen": "cancun.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Classic",
+        "categoria": "mesa",
+        "precio": 35678,
+        "imagen": "classic.png"
+    },
+    {
+        "id": 5,
+        "nombre": "Family",
+        "categoria": "pared",
+        "precio": 90123,
+        "imagen": "family.png"
+    },
+    {
+        "id": 6,
+        "nombre": "Flam",
+        "categoria": "plafon",
+        "precio": 67890,
+        "imagen": "flam.png"
+    },
+    {
+        "id": 7,
+        "nombre": "Globo",
+        "categoria": "exterior",
+        "precio": 54321,
+        "imagen": "globo.png"
+    },
+    {
+        "id": 8,
+        "nombre": "Melo",
+        "categoria": "mesa",
+        "precio": 76543,
+        "imagen": "melo.png"
+    },
+    {
+        "id": 9,
+        "nombre": "Osaka",
+        "categoria": "colgante",
+        "precio": 89012,
+        "imagen": "osakac.png"
+    },
+    {
+        "id": 10,
+        "nombre": "Osaka",
+        "categoria": "mesa",
+        "precio": 56789,
+        "imagen": "osakam.png"
+    },
+    {
+        "id": 11,
+        "nombre": "Ramla",
+        "categoria": "colgante",
+        "precio": 43210,
+        "imagen": "ramla.png"
+    },
+    {
+        "id": 12,
+        "nombre": "Salo",
+        "categoria": "plafon",
+        "precio": 68901,
+        "imagen": "salo.png"
+    },
+    {
+        "id": 13,
+        "nombre": "Toledo",
+        "categoria": "exterior",
+        "precio": 54320,
+        "imagen": "toledo1.png"
+    },
+    {
+        "id": 14,
+        "nombre": "Toledo",
+        "categoria": "exterior",
+        "precio": 78901,
+        "imagen": "toledo2.png"
+    },
+    {
+        "id": 15,
+        "nombre": "Toluca",
+        "categoria": "colgante",
+        "precio": 12345,
+        "imagen": "toluca.png"
+    },
+    {
+        "id": 16,
+        "nombre": "Toronto",
+        "categoria": "plafon",
+        "precio": 87654,
+        "imagen": "toronto.png"
+    },
+    {
+        "id": 17,
+        "nombre": "Trieste",
+        "categoria": "plafon",
+        "precio": 23456,
+        "imagen": "trieste"
+    }
+]
