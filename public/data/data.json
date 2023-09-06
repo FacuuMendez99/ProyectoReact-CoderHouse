@@ -4,118 +4,135 @@
         "nombre": "Bilbao",
         "categoria": "exterior",
         "precio": 45789,
-        "imagen": "bilbao2.png"
+        "imagen": "bilbao2.png",
+        "descripcion":"Spot rectangular para exterior unidireccional y bidireccional. IP44"
     },
     {
         "id": 2,
         "nombre": "Burgos",
         "categoria": "colgante",
         "precio": 60432,
-        "imagen": "burgos.png"
+        "imagen": "burgos.png",
+        "descripcion":"Colgante pantalla redonda de aluminio con detalles en madera para lámparas E27"
     },
     {
         "id": 3,
         "nombre": "Cancun",
         "categoria": "pared",
         "precio": 78591,
-        "imagen": "cancun.png"
+        "imagen": "cancun.png",
+        "descripcion":"Spots de chapa de 2 luces, para lámpara GU10 LED."
     },
     {
         "id": 4,
         "nombre": "Classic",
         "categoria": "mesa",
         "precio": 35678,
-        "imagen": "classic.png"
+        "imagen": "classic.png",
+        "descripcion":"Lámparas de escritorio en colores blanco, negro, rojo, azul, cromo, platil y cobre de línea clásica, doble brazo realizado en caño de hierro y chapa. Con movimientos de resorte"
     },
     {
         "id": 5,
         "nombre": "Family",
         "categoria": "pared",
         "precio": 90123,
-        "imagen": "family.png"
+        "imagen": "family.png",
+        "descripcion":"Aplique de 1 luz con detalles en madera y pantalla de tela para lámpara E27."
     },
     {
         "id": 6,
         "nombre": "Flam",
         "categoria": "plafon",
         "precio": 67890,
-        "imagen": "flam.png"
+        "imagen": "flam.png",
+        "descripcion":"Plafones LED redondos en 3 tamaños color blanco o negro."
     },
     {
         "id": 7,
         "nombre": "Globo",
         "categoria": "exterior",
         "precio": 54321,
-        "imagen": "globo.png"
+        "imagen": "globo.png",
+        "descripcion":"Aplique de exterior construido en policarbonato con tulipa globo opal o rayé. Para lámpara E27 LED."
     },
     {
         "id": 8,
         "nombre": "Melo",
         "categoria": "mesa",
         "precio": 76543,
-        "imagen": "melo.png"
+        "imagen": "melo.png",
+        "descripcion":"Lámpara de mesa con barral y flexible para lámpara E27 LED."
     },
     {
         "id": 9,
         "nombre": "Osaka",
         "categoria": "colgante",
         "precio": 89012,
-        "imagen": "osakac.png"
+        "imagen": "osakac.png",
+        "descripcion":"Colgante de 1 luz, malla metálica blanca o negra con madera. Para lámpara E27 LED."
     },
     {
         "id": 10,
         "nombre": "Osaka",
         "categoria": "mesa",
         "precio": 56789,
-        "imagen": "osakam.png"
+        "imagen": "osakam.png",
+        "descripcion":"Lámpara de mesa, malla metálica blanca o negra con madera. Para lámpara E27 LED."
     },
     {
         "id": 11,
         "nombre": "Ramla",
         "categoria": "colgante",
         "precio": 43210,
-        "imagen": "ramla.png"
+        "imagen": "ramla.png",
+        "descripcion":"Colgante LED forma ovoide con LED de 72w"
     },
     {
         "id": 12,
         "nombre": "Salo",
         "categoria": "plafon",
         "precio": 68901,
-        "imagen": "salo.png"
+        "imagen": "salo.png",
+        "descripcion":"Plafones LED redondo doble en 4 tamaños color blanco."
     },
     {
         "id": 13,
         "nombre": "Toledo",
         "categoria": "exterior",
         "precio": 54320,
-        "imagen": "toledo1.png"
+        "imagen": "toledo1.png",
+        "descripcion":"Spot rectangular para exterior unidireccional . IP44"
     },
     {
         "id": 14,
         "nombre": "Toledo",
         "categoria": "exterior",
         "precio": 78901,
-        "imagen": "toledo2.png"
+        "imagen": "toledo2.png",
+        "descripcion":"Spot rectangular para exterior bidireccional. IP44"
     },
     {
         "id": 15,
         "nombre": "Toluca",
         "categoria": "colgante",
         "precio": 12345,
-        "imagen": "toluca.png"
+        "imagen": "toluca.png",
+        "descripcion":"Colgante LED doble anillo de 80w"
     },
     {
         "id": 16,
         "nombre": "Toronto",
         "categoria": "plafon",
         "precio": 87654,
-        "imagen": "toronto.png"
+        "imagen": "toronto.png",
+        "descripcion":"Plafones con movimiento de 4 luces para lámparas GU10 con terminación en negro y blanco."
     },
     {
         "id": 17,
         "nombre": "Trieste",
         "categoria": "plafon",
         "precio": 23456,
-        "imagen": "trieste"
+        "imagen": "trieste.png",
+        "descripcion":"Plafón LED con tulipas triangulares cromo y acrílico."
     }
 ]

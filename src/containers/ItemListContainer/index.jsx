@@ -24,7 +24,7 @@ export const ItemListContainer = (props) => {
     }, [id])
 
     return (
-        <Grid container spacing={4}>
+        <Grid container spacing={2} padding={2}>
             {productos.map(producto => <Item producto={producto} key={producto.id}/>)}
         </Grid>
                 
