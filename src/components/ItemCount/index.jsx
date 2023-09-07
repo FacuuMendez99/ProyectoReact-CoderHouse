@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import AddCircleOutlinedIcon from '@material-ui/icons/AddCircleOutlined';
-import { Box, IconButton } from '@material-ui/core';
-import RemoveCircleOutlinedIcon from '@material-ui/icons/RemoveCircleOutlined';
+import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
+import { Box, IconButton } from '@mui/material';
+import RemoveCircleOutlinedIcon from '@mui/icons-material/RemoveCircleOutlined';
 
 export default function ItemCount() {
     const [cantidad, setCantidad] = useState(0)

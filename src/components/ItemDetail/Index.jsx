@@ -1,6 +1,7 @@
 import {Box, Container, Button} from "@mui/material"
-import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import ItemCount from "../ItemCount";
+
 
 export default function ItemDetail({detail}) {
     return (
