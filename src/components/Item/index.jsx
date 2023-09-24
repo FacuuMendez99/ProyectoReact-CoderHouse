@@ -8,13 +8,13 @@ export default function Item({producto}) {
                 <Card sx={{background:"#e1e8ef"}}>
                     <CardMedia 
                         component="img"
-                        image={`/data/productos/${producto.imagen}`}
+                        image={`/data/productos/${producto.image}`}
                     />
                     <Typography 
                         variant="h5"
                         marginLeft={2}
                     >
-                        {producto.nombre}
+                        {producto.title}
                     </Typography>
                     <CardActions
                         sx={{

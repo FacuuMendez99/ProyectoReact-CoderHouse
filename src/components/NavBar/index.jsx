@@ -16,27 +16,27 @@ export default function NavBar() {
                     </Typography>
                     <Box sx={{}}>
                         <List sx={{display:"inline-flex"}} >
-                                <Link to="categorias/colgante">
+                                <Link to="categoryId/colgante">
                                     <ListItemButton>
                                             Colgantes
                                     </ListItemButton>
                                 </Link>
-                                <Link to="categorias/plafon">
+                                <Link to="categoryId/plafon">
                                     <ListItemButton>
                                         Plafones
                                     </ListItemButton>
                                 </Link>
-                                <Link to="categorias/pared">
+                                <Link to="categoryId/pared">
                                     <ListItemButton>
                                         Lamparas de Pared
                                     </ListItemButton>
                                 </Link>
-                                <Link to="categorias/mesa">
+                                <Link to="categoryId/mesa">
                                     <ListItemButton>
                                         Lamparas de Mesa
                                     </ListItemButton>
                                 </Link>
-                                <Link to="categorias/exterior">
+                                <Link to="categoryId/exterior">
                                     <ListItemButton>
                                         Exterior
                                     </ListItemButton>
@@ -44,7 +44,9 @@ export default function NavBar() {
                         </List>
                     </Box>
                     <Divider orientation="vertical" variant="middle" flexItem/>
-                    <CartWidget/>
+                    <Link to="carrito">
+                        <CartWidget/>
+                    </Link>
                 </Toolbar>
             </AppBar>
         )

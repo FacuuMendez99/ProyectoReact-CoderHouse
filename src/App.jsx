@@ -1,13 +1,13 @@
-
 import "./App.css";
 import Router from "./components/Router";
-
+import { CartProvider } from "./context";
 
 
 function App() {
-
   return (
-    <Router/>
+    <CartProvider>
+      <Router/> 
+    </CartProvider>
   )
 }
 

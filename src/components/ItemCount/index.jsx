@@ -1,24 +1,18 @@
-import { useState } from 'react'
+
 import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
-import { Box, IconButton } from '@mui/material';
+import { Box, Button, IconButton } from '@mui/material';
 import RemoveCircleOutlinedIcon from '@mui/icons-material/RemoveCircleOutlined';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-export default function ItemCount() {
-    const [cantidad, setCantidad] = useState(0)
+export default function ItemCount( {cantidad, handleRestar, handleSumar, handleAgregar}) {
 
-    const agregar = () => {
-        setCantidad(cantidad + 1)
-    }
-
-    const quitar = () => {
-        (cantidad > 1) && setCantidad(cantidad - 1)
-    }
 
     return (
         <Box>
-            <IconButton onClick={quitar}><RemoveCircleOutlinedIcon/></IconButton>
+            <IconButton onClick={handleRestar}><RemoveCircleOutlinedIcon/></IconButton>
             <span>{cantidad}</span>
-            <IconButton onClick={agregar}><AddCircleOutlinedIcon/></IconButton>
+            <IconButton onClick={handleSumar}><AddCircleOutlinedIcon/></IconButton>
+            <Button onClick={handleAgregar}>Agregar al Carrito<ShoppingCartOutlinedIcon/></Button>
         </Box>
     )
 }

@@ -1,23 +1,29 @@
-import { ItemListContainer } from "../../containers/ItemListContainer";
-import ItemDetailContainer from "../ItemDetailContainer";
-import NavBar from "../NavBar";
 
+import ItemDetailContainer from "../../containers/ItemDetailContainer";
+import { ItemListContainer } from "../../containers/ItemListContainer";
+import { Cart } from "../Cart";
+
+import NavBar from "../NavBar";
 import {
     BrowserRouter,
     Routes,
     Route,
 } from "react-router-dom";
 
+
 export default function Router() {
+
+
     return (
-        <BrowserRouter>
-            <NavBar/>
-            <Routes>
-                <Route path="/" element={<ItemListContainer/>} />
-                <Route path="/categorias/:id" element={<ItemListContainer/>} />
-                <Route path="/item/:id" element={<ItemDetailContainer/>} />
-            </Routes>
-        </BrowserRouter>
+            <BrowserRouter>
+                <NavBar/>
+                <Routes>
+                    <Route path="/" element={<ItemListContainer/>} />
+                    <Route path="/categoryId/:id" element={<ItemListContainer/>} />
+                    <Route path="/item/:id" element={<ItemDetailContainer/>} />
+                    <Route path="/carrito" element={<Cart/>} />
+                </Routes>
+            </BrowserRouter>
     )
 }
 

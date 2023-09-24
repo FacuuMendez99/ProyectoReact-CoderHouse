@@ -1,32 +1,38 @@
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
 import {Grid} from "@mui/material"
 import React from "react"
 import Item from "../../components/Item"
+import { collection, getDocs,query, where } from "firebase/firestore"
+import { db } from "../../firebase/client"
+import { useParams } from "react-router-dom"
 
 
-export const ItemListContainer = (props) => {
+export const ItemListContainer = () => {
     const[productos, setProductos] = useState([])
-    const {id} = useParams ()
+    const productsRef = collection(db, "products")
+    const { id } = useParams()
 
-    useEffect(() => {
-        const getProducts = async () => {
-            const response = await fetch("/data/data.json")
-            const productos = await response.json()
-
-            const filtrarProducts = productos.filter(producto => producto.categoria === id)
-            if(filtrarProducts.length > 0) return setProductos(filtrarProducts)
-            setProductos(productos)
+    const getProducts = async () => {
+        const data = await getDocs(productsRef)
+        const dataFiltrada = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
+        
+        if (id !== undefined) {
+            const q = query(productsRef, where("categoryId", "==", id))
+            const querySnapshot = await getDocs(q)
+            setProductos(querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id})))
+        }else {
+            setProductos(dataFiltrada)
         }
+}
 
-        getProducts()
-
+useEffect(() => {
+    getProducts()
     }, [id])
+
 
     return (
         <Grid container spacing={2} padding={2}>
             {productos.map(producto => <Item producto={producto} key={producto.id}/>)}
         </Grid>
-                
     )
 }

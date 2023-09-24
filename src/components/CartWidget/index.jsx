@@ -1,11 +1,14 @@
 import { Badge, IconButton } from "@mui/material"
-import React from "react"
+import React, { useContext } from "react"
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { CartContext } from "../../context";
 
 export const CartWidget = () => {
+
+    const { cantidadEnCarrito } = useContext(CartContext);
     return (
         <IconButton sx={{marginLeft:2}}>
-            <Badge badgeContent={3} color="info">
+            <Badge badgeContent={cantidadEnCarrito()} color="info">
                 <ShoppingCartIcon/>
             </Badge>
         </IconButton>
