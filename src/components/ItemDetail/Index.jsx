@@ -7,7 +7,6 @@ import { CartContext } from "../../context";
 export default function ItemDetail({detail}) {
 
     const { carrito, agregarAlCarrito } = useContext(CartContext);
-    console.log(carrito);
 
     const [cantidad, setCantidad] = useState(1);
 

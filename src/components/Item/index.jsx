@@ -23,7 +23,6 @@ export default function Item({producto}) {
                             alignItems: 'center'
                         }}
                     >
-                        <Button>Agregar al Carrito</Button>
                         <Button><Link to={`/item/${producto.id}`}>Ver más</Link></Button>
                     </CardActions>
                 </Card>
